@@ -1,10 +1,15 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
+#mainTitle{
+  margin-top: 5vw;
+
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -55,4 +60,17 @@
 
 .acc{
   width: 25vw;
+}
+#people{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  #people{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+  }
+  
 }

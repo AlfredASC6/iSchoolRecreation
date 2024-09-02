@@ -7,20 +7,21 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const columns = [
-  { id: 'employer', label: 'Employer', minWidth: 170 },
+  { id: 'employer', label: 'Employer', minWidth: 100 },
   { id: 'term', label: 'Term', minWidth: 100 },
   {
     id: 'degree',
     label: 'Degree',
-    minWidth: 170,
+    minWidth: 100,
     //format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'city',
     label: 'City',
-    minWidth: 170,
+    minWidth: 100,
     //format: (value) => value.toLocaleString('en-US'),
   }
 ];
@@ -31,9 +32,8 @@ function createData(input) {
 
 
 export default function CoopTable(props) {
-  
+  const isPhoneScreen = useMediaQuery("(max-width:800px)");
   const rows = [
-    // props.whichGroup.coopInformation
     createData(props.whichGroup.coopInformation)
   ]
 
@@ -50,7 +50,7 @@ export default function CoopTable(props) {
   };
 
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+    <Paper sx={{ width: '100%', overflow: 'hidden' }} style={{marginLeft: '3vw'}}>
       <h4>{props.title}</h4>
 
       <TableContainer sx={{ maxHeight: 440 }}>
@@ -61,7 +61,7 @@ export default function CoopTable(props) {
                 <TableCell
                   key={term.id + "-"+ Math.random()}
                   align={term.align}
-                  style={{ minWidth: term.minWidth }}
+                  style={{ minWidth: term.minWidth}}
                 >
                   <h4>{term.label}</h4>
                 </TableCell>
@@ -71,12 +71,13 @@ export default function CoopTable(props) {
       
 
           <TableBody>
+
                 {                
                 rows[0].input
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row) => {
                     return (
-                        <TableRow>
+                        <TableRow >
                         {columns.map((column) => {
                           const value = row[column.id];
                           return (
@@ -96,7 +97,7 @@ export default function CoopTable(props) {
       <TablePagination
         rowsPerPageOptions={[5, 10, 25, 100]}
         component="div"
-        count={rows.length}
+        count={props.whichGroup.coopInformation.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

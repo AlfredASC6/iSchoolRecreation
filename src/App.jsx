@@ -6,24 +6,28 @@ import About from './components/About.jsx';
 import Degrees from './components/Degrees/Degrees';
 import Minors from './components/Minors/Minors.jsx';
 import Employment from './components/Employment/Employment.jsx';
-import '../src/App.css'
+import People from './components/People/People.jsx';
+// import '../src/App.css'
 function App() {
 
   return (
     <>
       <div id = "menu">
         <div id = "logo" class = "section">RIT</div>
-        <a className = "section">About</a>
-        <a className = "section">Degrees</a>
-        <a className="section">Minors</a>
-        <a className = "section">Employment</a>
-        <a className = "section">People</a>
+        <a className = "section" href='#about'>About</a>
+        <a className = "section" href='#degrees'>Degrees</a>
+        <a className="section" href='#minors'>Minors</a>
+        <a className = "section" href='#employment'>Employment</a>
+        <a className = "section" href='#people'>People</a>
       </div>
 
-      <About></About>
-      <div className='degreesHolder'><Degrees></Degrees></div>
-      <div className='degreesHolder'><Minors></Minors></div>
-      <Employment></Employment>
+      <div id = "about"><About></About></div>
+      <div className='degreesHolder' id = "degrees"><Degrees></Degrees></div>
+      <div className='degreesHolder' id = "minors"><Minors></Minors></div>
+      <div id = "employment"><Employment ></Employment></div>
+      <h2>Meet our people</h2>
+      <div id = "people"><People></People></div>
+      
     </>
   )
 }

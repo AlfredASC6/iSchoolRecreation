@@ -1,0 +1,80 @@
+#firstEmplTitle{
+    margin-top: 5vw;
+}
+
+#emplL{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+#emplR{
+    margin-right: 5vw;
+}
+#degreeStats{
+    display: flex;
+    flex-direction: row;    
+    position:absolute;
+    left: 0; 
+    right: 0;
+    height: 20vw;
+}
+
+.employmentTitles{
+    margin-top: 25vw;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    padding-top: 3vw;
+    padding-right: 3vw;
+}
+.statsText{
+    color: #F76902;
+}
+#emplTitle{
+    margin-top: 30vw;
+}
+#employers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 7vw;
+    padding-top: 3vw;
+}
+.employerText{
+    color:#F76902;
+}
+#careerTitle{
+    margin-top: 15vw;
+}
+.careersText{
+    padding-top: 3vw;
+    color:#F76902;
+}
+#careers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10vw;
+}
+#tables{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 800px){
+    #tables{
+        display: flex;
+        flex-direction: column;
+    }
+}

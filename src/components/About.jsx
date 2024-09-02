@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import getData from '../utils/getData.js';
-
+import "../App.css"
 const About = ()=>{
     const [loaded, setLoaded] = useState(false);
     const [aboutObj, setAboutObj] = useState();
@@ -32,9 +32,9 @@ const About = ()=>{
     <div>
         <br />
 
-        <h2>Rochester Institute of Technology</h2>
+        <h2 className='titles' id = "mainTitle">Rochester Institute of Technology</h2>
 
-        <h2>{aboutObj.title}</h2>
+        <h2 className = "titles">{aboutObj.title}</h2>
 
         <p>{aboutObj.description}</p>
 

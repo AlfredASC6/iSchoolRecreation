@@ -9,29 +9,29 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 const columns = [
-  { id: 'employer', label: 'Employer', minWidth: 170 },
+  { id: 'employer', label: 'Employer', minWidth: 80 },
   {
     id: 'degree',
     label: 'Degree',
-    minWidth: 170,
+    minWidth: 80,
     //format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'city',
     label: 'City',
-    minWidth: 170,
+    minWidth: 80,
     //format: (value) => value.toLocaleString('en-US'),
   },
   {
     id : 'title',
     label: 'Title',
-    minWidth: 170,
+    minWidth: 80,
   },
 
   {
     id: 'startDate', 
     label: 'Start Date',
-    minWidth: 170
+    minWidth: 80
   }
 ];
 
@@ -60,7 +60,7 @@ export default function EmploymentTable(props) {
 
   return (
     
-    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+    <Paper sx={{ width: '100%', overflow: 'hidden' }} style={{marginRight: '3vw'}}>
       <h4>{props.title}</h4>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
@@ -105,7 +105,7 @@ export default function EmploymentTable(props) {
       <TablePagination
         rowsPerPageOptions={[5, 10, 25, 100]}
         component="div"
-        count={rows.length}
+        count={props.whichGroup.professionalEmploymentInformation.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
