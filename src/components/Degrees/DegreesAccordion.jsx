@@ -8,7 +8,7 @@ import '../../../src/App.css';
 
 export default function DegreesAccordion(props){
     return(
-        <div>
+        <div className='accordion'>
             <Accordion className='acc'>
                 <AccordionSummary expandIcon={<ArrowDownwardIcon />}
                 aria-controls="panel1-content"

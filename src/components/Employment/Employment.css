@@ -77,4 +77,42 @@
         display: flex;
         flex-direction: column;
     }
+
+    .employmentTitles{
+        padding-top: 20vw;
+    }
+
+    #degreeStats{
+        height: auto;
+    }
+    .stats p{
+        font-size: 10px;
+    }
+    .employerHolder p{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        padding-right: 5vw;
+        font-size: 10px;
+    }
+    #employers{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: auto;
+        margin-top: 5vw;
+    }
+
+    #careerTitle{
+        padding-top: 15vw;
+    }
+
+    .careersText{
+        font-size: 10px;
+        padding-right: 3vw;
+    }
+
+    #careers{
+        height: auto;
+    }
 }

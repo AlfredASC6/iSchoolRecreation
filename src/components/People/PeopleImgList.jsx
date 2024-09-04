@@ -41,8 +41,8 @@ export default function PeopleImgList({ peeps = [], name }) {
 
   return (
     <>
-      <ImageList style={{marginLeft: isPhoneScreen ? '3vw' : '5vw', height: '50vw'}} className='imageListContainer'>
-        <ImageListItem key="Subheader" cols={ isPhoneScreen ? 3 : 1}>
+      <ImageList style={{marginLeft: isPhoneScreen ? '3vw' : '3vw', height: '50vw'}} className='imageListContainer'>
+        <ImageListItem key="Subheader" cols={ isPhoneScreen ? 3 : 2}>
           <ListSubheader component="div" style={{fontSize: "1.5vw"}}>{name}</ListSubheader>
         </ImageListItem>
         {peeps.map((item) => (
@@ -56,6 +56,8 @@ export default function PeopleImgList({ peeps = [], name }) {
                 width: isPhoneScreen ? '15vw' : '20vw', // Resize based on screen width
                 objectFit: 'fill',
                 height: isPhoneScreen ? '20vw' : 'auto',// Resize based on screen width }} 
+                marginLeft: isPhoneScreen ? '0px' : 'auto',
+                marginRight: isPhoneScreen ? '0px': 'auto'
               }
             }
             
@@ -67,7 +69,10 @@ export default function PeopleImgList({ peeps = [], name }) {
                 width: isPhoneScreen ? '15vw' : '20vw',
                 objectFit: 'fill',
                 height: isPhoneScreen ? '4vw' : '6vw',
-                fontSize: isPhoneScreen ? 'auto' : '1vw'
+                fontSize: isPhoneScreen ? 'auto' : '1vw',
+                marginLeft: isPhoneScreen ? '0px' : 'auto',
+                marginRight: isPhoneScreen ? '0px' : 'auto',
+                fontSizeAdjust: isPhoneScreen ? 'auto' : '10px'
               }}
 
               className='resizeItemBar'

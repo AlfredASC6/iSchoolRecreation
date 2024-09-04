@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import getData from '../utils/getData.js';
 import "../App.css"
+import image from '../assets/download.jpg';
 const About = ()=>{
     const [loaded, setLoaded] = useState(false);
     const [aboutObj, setAboutObj] = useState();
@@ -33,7 +34,7 @@ const About = ()=>{
         <br />
 
         <h2 className='titles' id = "mainTitle">Rochester Institute of Technology</h2>
-
+        <img src={image} alt=""  style = {{width: '70vw'}} />
         <h2 className = "titles">{aboutObj.title}</h2>
 
         <p>{aboutObj.description}</p>

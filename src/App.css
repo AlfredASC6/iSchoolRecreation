@@ -66,11 +66,27 @@
   flex-direction: row;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 800px) {
+  
   #people{
     display: flex;
     flex-direction: column;
     padding-left: 10vw;
   }
-  
+
+  .degreesHolder{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+  }
+  .degreesGroupDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .accordion{
+    margin-left: 30vw;
+  }
 }

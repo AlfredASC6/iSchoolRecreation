@@ -6,7 +6,7 @@ const DegreesGroup = ({title, whichGroup = []})=>{
         <>
             
 
-            <div>
+            <div className='degreesGroupDiv'>
                 <h3>{title}</h3>
                 {
                     whichGroup.map((p) =>

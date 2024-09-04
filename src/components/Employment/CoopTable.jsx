@@ -32,7 +32,7 @@ function createData(input) {
 
 
 export default function CoopTable(props) {
-  const isPhoneScreen = useMediaQuery("(max-width:800px)");
+  const isPhoneScreen = useMediaQuery('(max-width:800px)');
   const rows = [
     createData(props.whichGroup.coopInformation)
   ]
@@ -50,7 +50,7 @@ export default function CoopTable(props) {
   };
 
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden' }} style={{marginLeft: '3vw'}}>
+    <Paper sx={{ width: isPhoneScreen ? '100%' : '70vw', overflow: 'hidden', marginLeft: '1vw' , marginRight: '3vw'}}>
       <h4>{props.title}</h4>
 
       <TableContainer sx={{ maxHeight: 440 }}>
